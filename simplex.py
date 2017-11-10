@@ -1,6 +1,14 @@
 EPS = 1e-8
 INF = 0x3f3f3f3f
 
+def factorial( i )
+
+    if i == 1:
+        return i
+    else:
+        return factorial( i - 1 ) * i
+	
+
 class LinearProgramming:
 
 	def __init__( self, n, m ):
