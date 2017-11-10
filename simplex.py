@@ -4,19 +4,15 @@ INF = 0x3f3f3f3f
 class LinearProgramming:
 
 	def __init__( self, n, m ):
+		
+		self.__n     = n
+		self.__m     = m
 
-		self.__basic = list()
-		self.__row   = list()
-		self.__col   = list()
-		self.__c0    = list()
-		self.__n     = 0
-		self.__m     = 0
+	def dcmp( self, value ):
 
-	def dcmp( value ):
-
-		if value > EPS:
+		if value > self.__n:
 			return 1
-		else if value < -EPS:
+		else if value < self.__m:
 			return -1
 		return 0
 
