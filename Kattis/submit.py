@@ -19,25 +19,26 @@ else:
 
 # End Python 2/3 compatibility
 
-_DEFAULT_CONFIG = '/usr/local/etc/kattisrc'
+_DEFAULT_CONFIG = '/etc/kattis/submit/kattisrc'
 _VERSION = 'Version: $Version: $'
 _LANGUAGE_GUESS = {
-    '.java': 'Java',
     '.c': 'C',
-    '.cpp': 'C++',
-    '.h': 'C++',
-    '.cc': 'C++',
-    '.cxx': 'C++',
-    '.c++': 'C++',
-    '.py': 'Python',
-    '.cs': 'C#',
     '.c#': 'C#',
+    '.c++': 'C++',
+    '.cc': 'C++',
+    '.cpp': 'C++',
+    '.cs': 'C#',
+    '.cxx': 'C++',
     '.go': 'Go',
-    '.m': 'Objective-C',
+    '.h': 'C++',
     '.hs': 'Haskell',
-    '.pl': 'Prolog',
+    '.java': 'Java',
     '.js': 'JavaScript',
+    '.m': 'Objective-C',
+    '.pas': 'Pascal',
     '.php': 'PHP',
+    '.pl': 'Prolog',
+    '.py': 'Python',
     '.rb': 'Ruby'
 }
 _GUESS_MAINCLASS = {'Java', 'Python'}
@@ -68,8 +69,8 @@ def get_config():
                      os.path.join(os.path.dirname(sys.argv[0]), '.kattisrc')]):
         raise ConfigError('''\
 I failed to read in a config file from your home directory or from the
-same directory as this script. To download a .kattisrc file please visit 
-https://<kattis>/download/kattisrc
+same directory as this script. Please go to your Kattis installation
+to download a .kattisrc file.
 
 The file should look something like this:
 [user]
