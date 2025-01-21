@@ -1,0 +1,1 @@
+print(max(round((int(input())+1.5)/100),1)*100-1)
